@@ -3,7 +3,7 @@ import path from 'path';
 import getDiffs from './diffs.js';
 
 const getDataFile = (filepath) => {
-  const normalPath = path.resolve(process.cwd(), '__fixtures__/', filepath);
+  const normalPath = path.resolve(process.cwd(), filepath);
   const data = JSON.parse(fs.readFileSync(normalPath, 'utf8'));
   return data;
 };
