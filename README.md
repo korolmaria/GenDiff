@@ -25,7 +25,7 @@
     gendiff -f <format> <filepath1> <filepath2>
 
 ```
-**Formats:**
+**File formats:**
 
     * json
     * yml
