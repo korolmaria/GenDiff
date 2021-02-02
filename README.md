@@ -7,3 +7,24 @@
 
 ## Utilite for comparing of configure files 
 
+Publish library:
+
+```
+    make publish
+
+```
+Help:
+
+```
+    gendiff -h
+
+```
+Using:
+
+```
+    gendiff -f <format> <filepath1> <filepath2>
+
+```
+Formats:
+    * json
+    * yml
