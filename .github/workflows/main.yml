@@ -1,0 +1,22 @@
+name: EslintStatus
+
+
+on: [push]
+  
+jobs:
+ linting_repository:
+  
+  runs-on: ubuntu-latest
+
+  steps:
+  - name: git clone my repository
+    uses: actions/checkout@v1
+    
+  - name: install packages
+    run: make install
+    
+  - name: linting(ESLINT)
+    run: make lint
+
+  - name: testing(JEST)
+    run: make test
