@@ -42,4 +42,4 @@
 **File formats:**
 
     * json
-    * yml
+    * yaml
