@@ -42,4 +42,4 @@
 **Supported file formats:**
 
     * json
-    * yml
+    * yaml
