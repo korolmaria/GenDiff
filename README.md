@@ -7,7 +7,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a06c28c55e2445ed7a11/test_coverage)](https://codeclimate.com/github/korolmaria/frontend-project-lvl2/test_coverage)
 
 
-**Publish library:**
+**Installation of library:**
 
 ```
     make publish
@@ -39,7 +39,7 @@
     gendiff -f <format> <filepath1> <filepath2>
 
 ```
-**File formats:**
+**Supported file formats:**
 
     * json
     * yml
