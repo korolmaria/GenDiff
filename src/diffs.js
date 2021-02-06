@@ -9,36 +9,33 @@ const getUnionKeys = (data1, data2) => {
 
 const getDiffs = (data1, data2) => {
   const unionKeys = getUnionKeys(data1, data2);
-  const result = unionKeys.reduce((acc, item) => {
+  const result = unionKeys.map((item) => {
     const beforeValue = data1[item];
     const afterValue = data2[item];
     let status = ' ';
-    let key = '';
+    let value = beforeValue;
+    const key = item;
     if (!_.has(data1, item) && _.has(data2, item)) {
       status = '+';
-      key = `${status} ${item}`;
-      acc[key] = afterValue;
-      return acc;
+      value = afterValue;
+      return { status, key, value };
     }
     if (!_.has(data2, item) && _.has(data1, item)) {
       status = '-';
-      key = `${status} ${item}`;
-      acc[key] = beforeValue;
-      return acc;
+      value = beforeValue;
+      return { status, key, value };
     }
     if (beforeValue !== afterValue) {
       status = '-';
-      key = `${status} ${item}`;
-      acc[key] = beforeValue;
+      value = beforeValue;
+      const oneItem = { status, key, value };
       status = '+';
-      key = `${status} ${item}`;
-      acc[key] = afterValue;
-      return acc;
+      value = afterValue;
+      const twoItem = { status, key, value };
+      return [oneItem, twoItem];
     }
-    key = `${status} ${item}`;
-    acc[key] = afterValue;
-    return acc;
-  }, {});
+    return { status, key, value };
+  });
   return result;
 };
 
