@@ -3,12 +3,27 @@ import path from 'path';
 import getDiffs from './diffs.js';
 
 const renderTree = (elements) => {
-  const strElements = elements.flat().reduce((acc, { status, key, value }) => {
-    acc.push(`  ${status} ${key}: ${value}`);
-    return acc;
-  }, ['{']);
-  strElements.push('}');
-  return strElements.join('\n');
+  const strElems = elements.map(({
+    status, key, beforeValue, afterValue,
+  }) => {
+    switch (status) {
+      case 'deleted':
+        return `${' '}- ${key}: ${beforeValue}`;
+      case 'added':
+        return `${' '}+ ${key}: ${afterValue}`;
+
+      case 'changed':
+        return `${' '}- ${key}: ${beforeValue}\n${' '}+ ${key}: ${afterValue}`;
+
+      case 'unchanged':
+        return `${' '}  ${key}: ${afterValue}`;
+
+      default:
+        throw new Error(`Unknown status: ${status}`);
+    }
+  });
+  const string = `{\n${strElems.join('\n')}\n}`;
+  return string;
 };
 
 const getDataFile = (filepath) => {

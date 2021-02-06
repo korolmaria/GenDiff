@@ -12,29 +12,23 @@ const getDiffs = (data1, data2) => {
   const result = unionKeys.map((item) => {
     const beforeValue = data1[item];
     const afterValue = data2[item];
-    let status = ' ';
-    let value = beforeValue;
     const key = item;
     if (!_.has(data1, item) && _.has(data2, item)) {
-      status = '+';
-      value = afterValue;
-      return { status, key, value };
+      const status = 'added';
+      return { status, key, afterValue };
     }
     if (!_.has(data2, item) && _.has(data1, item)) {
-      status = '-';
-      value = beforeValue;
-      return { status, key, value };
+      const status = 'deleted';
+      return { status, key, beforeValue };
     }
     if (beforeValue !== afterValue) {
-      status = '-';
-      value = beforeValue;
-      const oneItem = { status, key, value };
-      status = '+';
-      value = afterValue;
-      const twoItem = { status, key, value };
-      return [oneItem, twoItem];
+      const status = 'changed';
+      return {
+        status, key, beforeValue, afterValue,
+      };
     }
-    return { status, key, value };
+    const status = 'unchanged';
+    return { status, key, afterValue };
   });
   return result;
 };
