@@ -21,5 +21,12 @@ jobs:
   - name: test-coverage
     env: 
       TESTREPORTER_ID: ${{ secrets.TESTREPORTER_ID }}
+<<<<<<< HEAD
     run: make test-coverage
     
+=======
+    with:
+      coverageCommand: make test-coverage
+      debug: true
+    
+>>>>>>> b265fc25c8cb4eb424d261cff52a72a3e0159358
