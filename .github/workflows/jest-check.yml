@@ -17,8 +17,12 @@ jobs:
 
   - name: testing(JEST)
     run: make test
-  
+
   - name: test-coverage
-    env: 
-      TESTREPORTER_ID: ${{ secrets.TESTREPORTER_ID }}
-    run: make test-coverage
+    uses: korolmaria/frontend-project-lvl2@v2.7.1
+        # Add Code Climate secret key
+    env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+    with:
+        coverageCommand: make test-coverage
+        debug: true
