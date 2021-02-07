@@ -46,4 +46,4 @@
 
 **How this using:**
 
-[![asciicast](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK.svg)](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK)
+[![asciicast](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK.svg) width = '50%'](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK)
