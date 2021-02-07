@@ -1,6 +1,6 @@
-import fs from 'fs';
 import path from 'path';
 import getDiffs from './diffs.js';
+import parseData from './parsers.js';
 
 const renderTree = (elements) => {
   const strElems = elements.map(({
@@ -28,8 +28,7 @@ const renderTree = (elements) => {
 
 const getDataFile = (filepath) => {
   const normalPath = path.resolve(process.cwd(), filepath);
-  const data = JSON.parse(fs.readFileSync(normalPath, 'utf8'));
-  return data;
+  return parseData(normalPath);
 };
 
 const genDiff = (filepath1, filepath2) => {
