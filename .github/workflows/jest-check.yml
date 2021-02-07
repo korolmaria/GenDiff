@@ -17,9 +17,13 @@ jobs:
 
   - name: testing(JEST)
     run: make test
+    
+  - name: Test & publish code coverage
 
-  - name: test-coverage
-    run: make test-coverage
-        # Add Code Climate secret key
+    uses: paambaati/codeclimate-action@v2.7.4
+    
     env:
-        CC_TEST_REPORTER_ID: f9edf78448e5fc939bef0651d984130ce556bdffe8c985b0b18036d9ac887c7b
+        CC_TEST_REPORTER_ID: ${{ secrets.TESTREPORTER_ID }}
+    with:
+        coverageCommand: make test-coverage
+        debug: true
