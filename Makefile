@@ -11,4 +11,4 @@ lintfix:
 test:
 	npx jest
 test-coverage:
-	npx jest --coverages
+	npx jest --coverage
