@@ -46,5 +46,5 @@
 
 **How this using:**
 <div>
-    <a href="https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK" target="_blank"><img src="a/x8ipDezxi6qC1k4FWGEHIOsWK.svg" width="50%" alt="RenderDiffs"/></a>
+    <a href="https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK" target="_blank"><img src="https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK.svg" width="50%" alt="RenderDiffs"/></a>
 </div>
