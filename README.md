@@ -43,3 +43,7 @@
 
     * json
     * yaml
+
+**How this using:**
+
+[![asciicast](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK.svg)](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK)
