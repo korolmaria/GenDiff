@@ -45,5 +45,6 @@
     * yaml
 
 **How this using:**
-
+<div width = '50%'>
 [![asciicast](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK.svg)](https://asciinema.org/a/x8ipDezxi6qC1k4FWGEHIOsWK)
+</div>
