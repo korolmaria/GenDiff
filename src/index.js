@@ -33,7 +33,9 @@ const getDataFile = (filepath) => {
 
 const genDiff = (filepath1, filepath2) => {
   const data1 = getDataFile(filepath1);
+  console.log(data1);
   const data2 = getDataFile(filepath2);
+  console.log(data2);
   const result = getDiffs(data1, data2);
   return renderTree(result);
 };
