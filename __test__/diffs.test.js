@@ -47,7 +47,7 @@ test('gendiff', () => {
    }
 }`;
   const beforeDataJson = getFixturePath('bigFile1.json');
-  const afterDataJson = getFixturePath('bigfile2.json');
+  const afterDataJson = getFixturePath('bigFile2.json');
   const beforeDataYaml = getFixturePath('file1.yml');
   const afterDataYaml = getFixturePath('file2.yml');
   expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedData);
