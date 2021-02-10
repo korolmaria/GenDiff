@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import path from 'path';
 import getDiffs from './diffs.js';
 import parseData from './parsers.js';
