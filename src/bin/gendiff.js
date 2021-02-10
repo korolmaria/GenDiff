@@ -9,7 +9,7 @@ program
     filepath1: 'file\'s path before it\'s changing',
     filepath2: 'file\'s path after it\'s changing',
   })
-  .option('-f, --format <type>', 'output format', 'tree')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .action((filepath1, filepath2) => {
     console.log(genDiff(filepath1, filepath2, program.format));
   })

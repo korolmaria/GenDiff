@@ -13,22 +13,34 @@ const getDiffs = (data1, data2) => {
     const beforeValue = data1[item];
     const afterValue = data2[item];
     const key = item;
+    let status = '';
     if (!_.has(data1, item) && _.has(data2, item)) {
-      const status = 'added';
+      status = 'added';
       return { status, key, afterValue };
     }
     if (!_.has(data2, item) && _.has(data1, item)) {
-      const status = 'deleted';
+      status = 'deleted';
       return { status, key, beforeValue };
     }
+
+    if (beforeValue === afterValue) {
+      status = 'unchanged';
+      return { status, key, afterValue };
+    }
+
+    if (beforeValue !== afterValue && _.isPlainObject(beforeValue) && _.isPlainObject(afterValue)) {
+      const children = getDiffs(beforeValue, afterValue);
+      status = 'node';
+      return { status, key, children };
+    }
+
     if (beforeValue !== afterValue) {
-      const status = 'changed';
+      status = 'changed';
       return {
         status, key, beforeValue, afterValue,
       };
     }
-    const status = 'unchanged';
-    return { status, key, afterValue };
+    return item;
   });
   return result;
 };
