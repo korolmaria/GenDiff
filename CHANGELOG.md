@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.1...v1.1.2) (2021-02-11)
+
+
+### Features
+
+* add new feature - plain format for outputing data -> add file formatters/plain.js and realizate tests for module ([862e318](https://github.com/korolmaria/frontend-project-lvl2/commit/862e31871948c5c3c380865455f3847bab52e407))
+
+
+### Bug Fixes
+
+* rename files in __fixtures__ and tests ([8875332](https://github.com/korolmaria/frontend-project-lvl2/commit/8875332356cfbe3c7627ad23b0b572a8a174e689))
+
 ### [1.1.1](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.0...v1.1.1) (2021-02-11)
 
 
