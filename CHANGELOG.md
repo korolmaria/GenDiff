@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.2...v1.1.3) (2021-02-11)
+
+
+### Bug Fixes
+
+* refactor src/ast.js ([6b3cefb](https://github.com/korolmaria/frontend-project-lvl2/commit/6b3cefb639e1e18b74a80498434bd4035a43a723))
+
 ### [1.1.2](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.1...v1.1.2) (2021-02-11)
 
 
