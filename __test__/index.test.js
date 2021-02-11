@@ -46,10 +46,10 @@ test('gendiff', () => {
        }
    }
 }`;
-  const beforeDataJson = getFixturePath('bigFile1.json');
-  const afterDataJson = getFixturePath('bigFile2.json');
-  const beforeDataYaml = getFixturePath('file1.yml');
-  const afterDataYaml = getFixturePath('file2.yml');
+  const beforeDataJson = getFixturePath('beforeFile.json');
+  const afterDataJson = getFixturePath('afterFile.json');
+  const beforeDataYaml = getFixturePath('beforeFile.yml');
+  const afterDataYaml = getFixturePath('afterFile.yml');
   expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedData);
   expect(genDiff(beforeDataYaml, afterDataYaml)).toBe(expectedData);
 });
