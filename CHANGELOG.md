@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.0...v1.2.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* refactor README.md - add outputs formats ([12fc506](https://github.com/korolmaria/frontend-project-lvl2/commit/12fc50654798f57d6b158c8cbfd79ace5bb182cb))
+
 ## [1.2.0](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.3...v1.2.0) (2021-02-11)
 
 
