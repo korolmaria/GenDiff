@@ -5,8 +5,13 @@ import genDiff from '../src/index.js';
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 // const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8').trim();
 
-test('gendiff', () => {
-  const expectedData = `{
+const beforeDataJson = getFixturePath('beforeFile.json');
+const afterDataJson = getFixturePath('afterFile.json');
+const beforeDataYaml = getFixturePath('beforeFile.yml');
+const afterDataYaml = getFixturePath('afterFile.yml');
+
+test('gendiff_stylish', () => {
+  const expectedDataStylish = `{
    common: {
      + follow: false
        setting1: Value 1
@@ -46,10 +51,23 @@ test('gendiff', () => {
        }
    }
 }`;
-  const beforeDataJson = getFixturePath('beforeFile.json');
-  const afterDataJson = getFixturePath('afterFile.json');
-  const beforeDataYaml = getFixturePath('beforeFile.yml');
-  const afterDataYaml = getFixturePath('afterFile.yml');
-  expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedData);
-  expect(genDiff(beforeDataYaml, afterDataYaml)).toBe(expectedData);
+  expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedDataStylish);
+  expect(genDiff(beforeDataYaml, afterDataYaml)).toBe(expectedDataStylish);
+});
+
+test('gendiff_plain', () => {
+  const expectedDataPlain = `Property 'common.follow' was added with value: false
+Property 'common.setting2' was removed
+Property 'common.setting3' was updated. From true to null
+Property 'common.setting4' was added with value: 'blah blah'
+Property 'common.setting5' was added with value: [complex value]
+Property 'common.setting6.doge.wow' was updated. From '' to 'so much'
+Property 'common.setting6.ops' was added with value: 'vops'
+Property 'group1.baz' was updated. From 'bas' to 'bars'
+Property 'group1.nest' was updated. From [complex value] to 'str'
+Property 'group2' was removed
+Property 'group3' was added with value: [complex value]`;
+
+  expect(genDiff(beforeDataJson, afterDataJson, 'plain')).toBe(expectedDataPlain);
+  expect(genDiff(beforeDataYaml, afterDataYaml, 'plain')).toBe(expectedDataPlain);
 });
