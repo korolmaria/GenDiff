@@ -7,13 +7,13 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a06c28c55e2445ed7a11/test_coverage)](https://codeclimate.com/github/korolmaria/frontend-project-lvl2/test_coverage)
 
 
-**Installation of library:**
+### Installation of library: ###
 
 ```
     make publish
 
 ```
-**Usage:**
+### Usage: ###
 
 ```
   Usage: gendiff [options] <filepath1> <filepath2>
@@ -27,24 +27,24 @@
 
 ```
 
-**Help:**
+### Help: ###
 
 ```
     gendiff -h
 
 ```
-**Using:**
+### Using: ###
 
 ```
     gendiff -f <format> <filepath1> <filepath2>
 
 ```
-**Supported file formats:**
+### Supported file formats: ###
 
     * json
     * yaml
 
-**Supported output formats :**
+### Supported output formats : ###
 
     * stylish
     * plain
