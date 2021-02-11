@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.3...v1.2.0) (2021-02-11)
+
+
+### Features
+
+* add new feature - json format outputting data and add tests for its ([0d234f9](https://github.com/korolmaria/frontend-project-lvl2/commit/0d234f9fdb42c09030e4c2478217df92af3d9d17))
+
 ### [1.1.3](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.1.2...v1.1.3) (2021-02-11)
 
 
