@@ -44,6 +44,12 @@
     * json
     * yaml
 
+**Supported output formats :**
+
+    * stylish
+    * plain
+    * json
+
 **How this using in Stylish format:**
 <div>
     <a href="https://asciinema.org/a/RHoBBMay3IEr64x9XEzXa0wXJ" target="_blank"><img src="https://asciinema.org/a/RHoBBMay3IEr64x9XEzXa0wXJ.svg" width = "80%" alt="gendiff_stylish"/></a>
