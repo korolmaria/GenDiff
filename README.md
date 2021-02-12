@@ -10,7 +10,7 @@
 ### Installation of library: ###
 
 ```
-    make publish
+    $make install
 
 ```
 ### Usage: ###
