@@ -11,8 +11,8 @@ const stringifyData = (val, depth) => {
     return val;
   }
   const dataKeys = Object.keys(val);
-  const elements = dataKeys.flatMap((key) => `\n${insertSpace(depth)}  ${key}: ${stringifyData(val[key], depth + 4)}\n${insertSpaceBrace(depth)}`);
-  return `{${elements.join('')}}`;
+  const elements = dataKeys.flatMap((key) => `\n${insertSpace(depth)}  ${key}: ${stringifyData(val[key], depth + 4)}`);
+  return `{${elements.join('')}\n${insertSpaceBrace(depth)}}`;
 };
 
 const getRenderStylish = (elements, depth = 2) => {
