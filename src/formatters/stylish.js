@@ -1,18 +1,15 @@
 import _ from 'lodash';
 
 const insertSpace = (depth) => ' '.repeat(depth);
-const insertSpaceBrace = (depth) => {
-  const result = depth <= 1 ? '' : insertSpace(depth - 2);
-  return result;
-};
+const insertSpaceBrace = (depth) => (depth <= 1 ? '' : insertSpace(depth - 2));
 
 const stringifyData = (val, depth) => {
   if (!_.isObject(val)) {
     return val;
   }
-  const dataKeys = Object.keys(val);
-  const elements = dataKeys.flatMap((key) => `\n${insertSpace(depth)}  ${key}: ${stringifyData(val[key], depth + 4)}`);
-  return `{${elements.join('')}\n${insertSpaceBrace(depth)}}`;
+  const valKeys = Object.keys(val);
+  const strElems = valKeys.flatMap((key) => `\n${insertSpace(depth)}  ${key}: ${stringifyData(val[key], depth + 4)}`);
+  return `{${strElems.join('')}\n${insertSpaceBrace(depth)}}`;
 };
 
 const getRenderStylish = (elements, depth = 2) => {

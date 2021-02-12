@@ -1,18 +1,18 @@
 import _ from 'lodash';
 
 const stringifyData = (val) => {
-  const wordsException = [true, false, null, undefined, 0];
-  if (!_.isObject(val) && !_.includes(wordsException, val)) {
+  const elementsExcep = [true, false, null, undefined, 0];
+  if (!_.isObject(val) && !_.includes(elementsExcep, val)) {
     return `'${val}'`;
   }
-  if (!_.isObject(val) && _.includes(wordsException, val)) {
+  if (!_.isObject(val) && _.includes(elementsExcep, val)) {
     return val;
   }
   return '[complex value]';
 };
 
 const getRenderPlain = (elements, path = '') => {
-  const resultElements = elements
+  const strElems = elements
     .filter((item) => item.status !== 'unchanged')
     .flatMap(({
       status, key, beforeValue, afterValue, children,
@@ -31,7 +31,7 @@ const getRenderPlain = (elements, path = '') => {
           throw new Error(`Unknown status: ${status}`);
       }
     });
-  return `${resultElements.join('\n')}`;
+  return `${strElems.join('\n')}`;
 };
 
 export default getRenderPlain;
