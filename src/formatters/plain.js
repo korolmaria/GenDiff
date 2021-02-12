@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const stringifyData = (val) => {
-  const wordsException = [true, false, null, undefined];
+  const wordsException = [true, false, null, undefined, 0];
   if (!_.isObject(val) && !_.includes(wordsException, val)) {
     return `'${val}'`;
   }
