@@ -42,6 +42,9 @@ test('gendiff_stylish', () => {
     }
   - group2: {
         abc: 12345
+            deep: {
+            id: 45
+        }
     }
   + group3: {
         deep: {
@@ -49,6 +52,7 @@ test('gendiff_stylish', () => {
                 number: 45
             }
         }
+            fee: 100500
     }
 }`;
   expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedDataStylish);

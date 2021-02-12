@@ -10,9 +10,9 @@ const stringifyData = (val, depth) => {
   if (!_.isObject(val)) {
     return val;
   }
-  const dataObj = Object.entries(val).flat();
-  const [key, value] = dataObj;
-  return `{\n${insertSpace(depth)}  ${key}: ${stringifyData(value, depth + 4)}\n${insertSpaceBrace(depth)}}`;
+  const dataKeys = Object.keys(val);
+  const elements = dataKeys.flatMap((key) => `${insertSpace(depth)}  ${key}: ${stringifyData(val[key], depth + 4)}\n${insertSpaceBrace(depth)}`);
+  return `{\n${elements.join('')}}`;
 };
 
 const getRenderStylish = (elements, depth = 2) => {
