@@ -15,7 +15,7 @@ const stringifyData = (val, depth) => {
   return `{\n${insertSpace(depth)}  ${key}: ${stringifyData(value, depth + 4)}\n${insertSpaceBrace(depth)}}`;
 };
 
-const getRenderStylish = (elements, depth = 1) => {
+const getRenderStylish = (elements, depth = 2) => {
   const strElems = elements.flatMap(({
     status, key, beforeValue, afterValue, children,
   }) => {
