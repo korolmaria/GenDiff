@@ -1,6 +1,6 @@
 // import fs from 'fs';
 import path from 'path';
-import genDiff from '../src';
+import genDiff from '../src/index.js';
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 // const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8').trim();
@@ -51,8 +51,8 @@ test('gendiff_stylish', () => {
         }
     }
 }`;
-  expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedDataStylish);
-  expect(genDiff(beforeDataYaml, afterDataYaml)).toBe(expectedDataStylish);
+  expect(genDiff(beforeDataJson, afterDataJson, 'stylish')).toBe(expectedDataStylish);
+  expect(genDiff(beforeDataYaml, afterDataYaml, 'stylish')).toBe(expectedDataStylish);
 });
 
 test('gendiff_plain', () => {
