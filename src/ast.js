@@ -4,7 +4,8 @@ const getUnionKeys = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
   const unionKeys = _.union(keys1, keys2);
-  return _.sortBy(uionKeys, (a, b) => b - a);
+  const sortedKeys = _.sortBy(unionKeys);
+  return sortedKeys;
 };
 
 const getDiffs = (data1, data2) => {
