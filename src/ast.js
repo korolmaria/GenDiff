@@ -3,8 +3,8 @@ import _ from 'lodash';
 const getUnionKeys = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
-  const unionKeys = _.union(keys1, keys2).sort();
-  return unionKeys;
+  const unionKeys = _.union(keys1, keys2);
+  return unionKeys.sort();
 };
 
 const getDiffs = (data1, data2) => {
