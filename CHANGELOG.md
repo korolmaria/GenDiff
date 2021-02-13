@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.5](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.4...v1.2.5) (2021-02-13)
+
+
+### Bug Fixes
+
+* refactor package.json - delete 'fs'&'path' from dependencies ([a4267a2](https://github.com/korolmaria/frontend-project-lvl2/commit/a4267a2b29e40e608f05c18c0a1635496c1a295e))
+* update README.md file ([e39805b](https://github.com/korolmaria/frontend-project-lvl2/commit/e39805b8d98be9cae23256c79b7b2da3072a3c68))
+
 ### [1.2.4](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.2...v1.2.4) (2021-02-12)
 
 
