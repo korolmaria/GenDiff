@@ -1,9 +1,9 @@
-// import fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 import genDiff from '../src/index.js';
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-// const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8').trim();
+const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 const beforeDataJson = getFixturePath('beforeFile.json');
 const afterDataJson = getFixturePath('afterFile.json');
@@ -11,50 +11,7 @@ const beforeDataYaml = getFixturePath('beforeFile.yml');
 const afterDataYaml = getFixturePath('afterFile.yml');
 
 test('gendiff_stylish', () => {
-  const expectedDataStylish = `{
-    common: {
-      + follow: false
-        setting1: Value 1
-      - setting2: 200
-      - setting3: true
-      + setting3: null
-      + setting4: blah blah
-      + setting5: {
-            key5: value5
-        }
-        setting6: {
-            doge: {
-              - wow: 
-              + wow: so much
-            }
-            key: value
-          + ops: vops
-        }
-    }
-    group1: {
-      - baz: bas
-      + baz: bars
-        foo: bar
-      - nest: {
-            key: value
-        }
-      + nest: str
-    }
-  - group2: {
-        abc: 12345
-        deep: {
-            id: 45
-        }
-    }
-  + group3: {
-        deep: {
-            id: {
-                number: 45
-            }
-        }
-        fee: 100500
-    }
-}`;
+  const expectedDataStylish = readFile('expectedStylish.txt');
   expect(genDiff(beforeDataJson, afterDataJson)).toBe(expectedDataStylish);
   expect(genDiff(beforeDataYaml, afterDataYaml)).toBe(expectedDataStylish);
 });

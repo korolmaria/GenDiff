@@ -3,7 +3,7 @@ install:
 publish:
 	npm publish --dry-run
 gendiff:
-	node /src/bin/gendiff.js
+	node bin/gendiff.js
 lint:
 	npx eslint .
 lintfix:
