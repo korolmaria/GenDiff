@@ -11,6 +11,6 @@ lintfix:
 test:
 	npm test
 test-coverage:
-	npx jest --coverage
+	npm test -- --coverage --coverageProvider=v8
 test-watch:
 	npx -n --experimental-vm-modules jest --watch
