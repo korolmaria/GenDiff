@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.7](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.6...v1.2.7) (2021-02-15)
+
+
+### Bug Fixes
+
+* refactor - rename variables and fixing bugs in funcs ([169baa4](https://github.com/korolmaria/frontend-project-lvl2/commit/169baa42f63f5e35c575299067c28a317b9a38dc))
+* refactor Makefile - change test-coverage command ([90b4ca6](https://github.com/korolmaria/frontend-project-lvl2/commit/90b4ca67285297ca633eff7dfd498b1ac1ac9c57))
+* update Makefile -> change coverage command ([6a2c449](https://github.com/korolmaria/frontend-project-lvl2/commit/6a2c4498b3a01daf8826b784a7e0f4fb4b25ba37))
+
 ### [1.2.6](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.5...v1.2.6) (2021-02-15)
 
 
