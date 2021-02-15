@@ -9,6 +9,8 @@ lint:
 lintfix:
 	npx eslint --fix .
 test:
-	npx jest
+	npm test
 test-coverage:
-	npx jest --coverage
+	npm test --coverage
+test-watch:
+	npx -n --experimental-vm-modules jest --watch

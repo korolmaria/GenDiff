@@ -1,0 +1,116 @@
+[
+  {
+    "status": "node",
+    "key": "common",
+    "children": [
+      {
+        "status": "added",
+        "key": "follow",
+        "afterValue": false
+      },
+      {
+        "status": "unchanged",
+        "key": "setting1",
+        "afterValue": "Value 1"
+      },
+      {
+        "status": "deleted",
+        "key": "setting2",
+        "beforeValue": 200
+      },
+      {
+        "status": "changed",
+        "key": "setting3",
+        "beforeValue": true,
+        "afterValue": null
+      },
+      {
+        "status": "added",
+        "key": "setting4",
+        "afterValue": "blah blah"
+      },
+      {
+        "status": "added",
+        "key": "setting5",
+        "afterValue": {
+          "key5": "value5"
+        }
+      },
+      {
+        "status": "node",
+        "key": "setting6",
+        "children": [
+          {
+            "status": "node",
+            "key": "doge",
+            "children": [
+              {
+                "status": "changed",
+                "key": "wow",
+                "beforeValue": "",
+                "afterValue": "so much"
+              }
+            ]
+          },
+          {
+            "status": "unchanged",
+            "key": "key",
+            "afterValue": "value"
+          },
+          {
+            "status": "added",
+            "key": "ops",
+            "afterValue": "vops"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": "node",
+    "key": "group1",
+    "children": [
+      {
+        "status": "changed",
+        "key": "baz",
+        "beforeValue": "bas",
+        "afterValue": "bars"
+      },
+      {
+        "status": "unchanged",
+        "key": "foo",
+        "afterValue": "bar"
+      },
+      {
+        "status": "changed",
+        "key": "nest",
+        "beforeValue": {
+          "key": "value"
+        },
+        "afterValue": "str"
+      }
+    ]
+  },
+  {
+    "status": "deleted",
+    "key": "group2",
+    "beforeValue": {
+      "abc": 12345,
+      "deep": {
+        "id": 45
+      }
+    }
+  },
+  {
+    "status": "added",
+    "key": "group3",
+    "afterValue": {
+      "deep": {
+        "id": {
+          "number": 45
+        }
+      },
+      "fee": 100500
+    }
+  }
+]
