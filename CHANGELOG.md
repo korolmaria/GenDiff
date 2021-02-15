@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.5...v1.2.6) (2021-02-15)
+
+
+### Bug Fixes
+
+* change property main in package.json ([2224307](https://github.com/korolmaria/frontend-project-lvl2/commit/22243078b78f807d5cf6d748128dd787c626849a))
+* change version -> 1.0.0 ([4c5f214](https://github.com/korolmaria/frontend-project-lvl2/commit/4c5f214b97e310c19bb06836c0b092c83a24fb4a))
+* delete 'fs-security' in package-lock.json ([f24eb8d](https://github.com/korolmaria/frontend-project-lvl2/commit/f24eb8dfbe23e81b994d6f66495f731791573ec2))
+* refactor - sort() ([b898987](https://github.com/korolmaria/frontend-project-lvl2/commit/b8989876be5086bdce290f1c9f147d07435f2ca7))
+* uninstall commitlint package ([08fa76c](https://github.com/korolmaria/frontend-project-lvl2/commit/08fa76c93832090185531f5026eb236a169e90a8))
+* update func ([45d59c6](https://github.com/korolmaria/frontend-project-lvl2/commit/45d59c61b549da751fb8fcbe6b9a4f70165119b3))
+* update func getUnionKeys ([fd3caa1](https://github.com/korolmaria/frontend-project-lvl2/commit/fd3caa1a2a636c4e1cdabb571f2a66bc5c2231ca))
+* update func getUnionKeys ([b1332d8](https://github.com/korolmaria/frontend-project-lvl2/commit/b1332d8fb375622ef7068496df1d338ec6d213f6))
+* update func getUnionKeys ([57cab2a](https://github.com/korolmaria/frontend-project-lvl2/commit/57cab2a36107182bc3845777a1ac828d80a59357))
+* update version ->1.2.5 in package.json ([7eaa9e3](https://github.com/korolmaria/frontend-project-lvl2/commit/7eaa9e38b60fa8ab4d2d70181e2f089d79a1c51d))
+
 ### [1.2.5](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.4...v1.2.5) (2021-02-13)
 
 
