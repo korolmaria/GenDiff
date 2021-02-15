@@ -14,9 +14,9 @@ const stringifyData = (val, depth) => {
 
 const getRenderStylish = (elements, depth = 2) => {
   const strElems = elements.flatMap(({
-    status, key, beforeValue, afterValue, children,
+    type, key, beforeValue, afterValue, children,
   }) => {
-    switch (status) {
+    switch (type) {
       case 'deleted':
         return `${insertSpace(depth)}- ${key}: ${stringifyData(beforeValue, depth + 4)}`;
       case 'added':
@@ -28,11 +28,8 @@ const getRenderStylish = (elements, depth = 2) => {
       case 'unchanged':
         return `${insertSpace(depth)}  ${key}: ${stringifyData(afterValue, depth + 4)}`;
 
-      case 'node':
-        return `${insertSpace(depth)}  ${key}: ${getRenderStylish(children, depth + 4)}`;
-
       default:
-        throw new Error(`Unknown status: ${status}`);
+        return `${insertSpace(depth)}  ${key}: ${getRenderStylish(children, depth + 4)}`;
     }
   });
   return `{\n${strElems.join('\n')}\n${insertSpaceBrace(depth)}}`;

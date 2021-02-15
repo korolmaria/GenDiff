@@ -4,38 +4,32 @@ const getUnionKeys = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
   const unionKeys = _.union(keys1, keys2);
-  const sortedKeys = _.sortBy(unionKeys);
-  return sortedKeys;
+  return _.sortBy(unionKeys);
 };
 
 const getDiffs = (data1, data2) => {
   const unionKeys = getUnionKeys(data1, data2);
-  const result = unionKeys.map((item) => {
-    const beforeValue = data1[item];
-    const afterValue = data2[item];
-    const key = item;
-    if (!_.has(data1, item) && _.has(data2, item)) {
-      return { status: 'added', key, afterValue };
+  const result = unionKeys.map((key) => {
+    const beforeValue = data1[key];
+    const afterValue = data2[key];
+    if (!_.has(data1, key)) {
+      return { type: 'added', key, afterValue };
     }
-    if (!_.has(data2, item) && _.has(data1, item)) {
-      return { status: 'deleted', key, beforeValue };
-    }
-
-    if (beforeValue === afterValue) {
-      return { status: 'unchanged', key, afterValue };
+    if (!_.has(data2, key)) {
+      return { type: 'deleted', key, beforeValue };
     }
 
-    if (beforeValue !== afterValue && _.isPlainObject(beforeValue) && _.isPlainObject(afterValue)) {
+    if (_.isPlainObject(beforeValue) && _.isPlainObject(afterValue)) {
       const children = getDiffs(beforeValue, afterValue);
-      return { status: 'node', key, children };
+      return { type: 'node', key, children };
     }
 
     if (beforeValue !== afterValue) {
       return {
-        status: 'changed', key, beforeValue, afterValue,
+        type: 'changed', key, beforeValue, afterValue,
       };
     }
-    return item;
+    return { type: 'unchanged', key, afterValue };
   });
   return result;
 };

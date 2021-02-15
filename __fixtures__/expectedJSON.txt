@@ -1,51 +1,51 @@
 [
   {
-    "status": "node",
+    "type": "node",
     "key": "common",
     "children": [
       {
-        "status": "added",
+        "type": "added",
         "key": "follow",
         "afterValue": false
       },
       {
-        "status": "unchanged",
+        "type": "unchanged",
         "key": "setting1",
         "afterValue": "Value 1"
       },
       {
-        "status": "deleted",
+        "type": "deleted",
         "key": "setting2",
         "beforeValue": 200
       },
       {
-        "status": "changed",
+        "type": "changed",
         "key": "setting3",
         "beforeValue": true,
         "afterValue": null
       },
       {
-        "status": "added",
+        "type": "added",
         "key": "setting4",
         "afterValue": "blah blah"
       },
       {
-        "status": "added",
+        "type": "added",
         "key": "setting5",
         "afterValue": {
           "key5": "value5"
         }
       },
       {
-        "status": "node",
+        "type": "node",
         "key": "setting6",
         "children": [
           {
-            "status": "node",
+            "type": "node",
             "key": "doge",
             "children": [
               {
-                "status": "changed",
+                "type": "changed",
                 "key": "wow",
                 "beforeValue": "",
                 "afterValue": "so much"
@@ -53,12 +53,12 @@
             ]
           },
           {
-            "status": "unchanged",
+            "type": "unchanged",
             "key": "key",
             "afterValue": "value"
           },
           {
-            "status": "added",
+            "type": "added",
             "key": "ops",
             "afterValue": "vops"
           }
@@ -67,22 +67,22 @@
     ]
   },
   {
-    "status": "node",
+    "type": "node",
     "key": "group1",
     "children": [
       {
-        "status": "changed",
+        "type": "changed",
         "key": "baz",
         "beforeValue": "bas",
         "afterValue": "bars"
       },
       {
-        "status": "unchanged",
+        "type": "unchanged",
         "key": "foo",
         "afterValue": "bar"
       },
       {
-        "status": "changed",
+        "type": "changed",
         "key": "nest",
         "beforeValue": {
           "key": "value"
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "status": "deleted",
+    "type": "deleted",
     "key": "group2",
     "beforeValue": {
       "abc": 12345,
@@ -102,7 +102,7 @@
     }
   },
   {
-    "status": "added",
+    "type": "added",
     "key": "group3",
     "afterValue": {
       "deep": {

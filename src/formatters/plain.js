@@ -13,22 +13,20 @@ const stringifyData = (val) => {
 
 const getRenderPlain = (elements, path = '') => {
   const strElems = elements
-    .filter((item) => item.status !== 'unchanged')
+    .filter((item) => item.type !== 'unchanged')
     .flatMap(({
-      status, key, beforeValue, afterValue, children,
+      type, key, beforeValue, afterValue, children,
     }) => {
       const fullPathKey = `${path}${key}`;
-      switch (status) {
+      switch (type) {
         case 'deleted':
           return `Property '${fullPathKey}' was removed`;
         case 'added':
           return `Property '${fullPathKey}' was added with value: ${stringifyData(afterValue)}`;
         case 'changed':
           return `Property '${fullPathKey}' was updated. From ${stringifyData(beforeValue)} to ${stringifyData(afterValue)}`;
-        case 'node':
-          return `${getRenderPlain(children, `${fullPathKey}.`)}`;
         default:
-          throw new Error(`Unknown status: ${status}`);
+          return `${getRenderPlain(children, `${fullPathKey}.`)}`;
       }
     });
   return `${strElems.join('\n')}`;

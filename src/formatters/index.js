@@ -8,4 +8,10 @@ const formatter = {
   json: getRenderJSON,
 };
 
-export default (format) => formatter[format];
+export default (formatName) => {
+  try {
+    return formatter[formatName];
+  } catch {
+    throw new Error(`Error! Unknown format: ${formatName}`);
+  }
+};
