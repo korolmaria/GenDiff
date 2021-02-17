@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.8](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.7...v1.2.8) (2021-02-17)
+
+
+### Bug Fixes
+
+* refactor conditions in funcs ast.js&plain.js ([511df7a](https://github.com/korolmaria/frontend-project-lvl2/commit/511df7a8441ff035f8523d7a44a840cae0915594))
+* refactor parser.js - change structure of module (delete fs, path from imports) ([46ad2ab](https://github.com/korolmaria/frontend-project-lvl2/commit/46ad2ab2e80ab3b46016261eae62a1092b4ca5bd))
+
 ### [1.2.7](https://github.com/korolmaria/frontend-project-lvl2/compare/v1.2.6...v1.2.7) (2021-02-15)
 
 
