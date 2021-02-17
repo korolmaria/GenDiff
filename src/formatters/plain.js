@@ -1,14 +1,15 @@
-import _ from 'lodash';
-
 const stringifyData = (val) => {
-  const elementsExcep = [true, false, null, undefined, 0];
-  if (!_.isObject(val) && !_.includes(elementsExcep, val)) {
-    return `'${val}'`;
+  if (val === null) {
+    return 'null';
   }
-  if (!_.isObject(val) && _.includes(elementsExcep, val)) {
-    return val;
+  switch (typeof val) {
+    case 'string':
+      return `'${val}'`;
+    case 'object':
+      return '[complex value]';
+    default:
+      return val;
   }
-  return '[complex value]';
 };
 
 const getRenderPlain = (elements, path = '') => {

@@ -24,7 +24,7 @@ const getDiffs = (data1, data2) => {
       return { type: 'node', key, children };
     }
 
-    if (beforeValue !== afterValue) {
+    if (!_.isEqual(beforeValue, afterValue)) {
       return {
         type: 'changed', key, beforeValue, afterValue,
       };
