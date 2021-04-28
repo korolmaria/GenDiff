@@ -47,17 +47,4 @@
     * plain
     * json
 
-**How this using in Stylish format:**
-<div>
-    <a href="https://asciinema.org/a/RHoBBMay3IEr64x9XEzXa0wXJ" target="_blank"><img src="https://asciinema.org/a/RHoBBMay3IEr64x9XEzXa0wXJ.svg" width = "80%" alt="gendiff_stylish"/></a>
-</div>
 
-**How this using in Plain format:**
-<div>
-    <a href="https://asciinema.org/a/Dh2Jr6JArM56JWvexV0kuAxPF" target="_blank"><img src="https://asciinema.org/a/Dh2Jr6JArM56JWvexV0kuAxPF.svg" width = "80%" alt="gendiff_plain"/></a>
-</div>
-
-**How this using in JSON format:**
-<div>
-    <a href="https://asciinema.org/a/y5zRKrHon1z4i6r9QjttVLCwY" target="_blank"><img src="https://asciinema.org/a/y5zRKrHon1z4i6r9QjttVLCwY.svg" width = "80%" alt="gendiff_json"/></a>
-</div>
